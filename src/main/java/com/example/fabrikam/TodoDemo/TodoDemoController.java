@@ -26,9 +26,11 @@ public class TodoDemoController {
 
     @RequestMapping("/add")
     public String addTodo(@ModelAttribute TodoItem requestItem) {
+        console.log('ghghghg'); 
         TodoItem item = new TodoItem(requestItem.getCategory(), requestItem.getName());
         repository.save(item);
-        return "redirect:/";
+        return "redirect:/jqwke";
+          
     }
 
     @RequestMapping("/update")
